@@ -3,6 +3,10 @@ document.getElementById('startButton').addEventListener('click', () => {
     startBreathingExercise(time);
 });
 
+document.getElementById('themeToggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+});
+
 function startBreathingExercise(minutes) {
     const totalSeconds = minutes * 60;
     let currentTime = totalSeconds;
@@ -31,7 +35,7 @@ function startBreathingExercise(minutes) {
             clearInterval(timerInterval);
             clearInterval(breathingInterval);
             timerDisplay.textContent = 'Time left: 0:00';
-            breathingCircle.style.transform = 'scale(1)';
+            breathingCircle.style.transform = 'scale(1)'; // Volta ao tamanho original
             alert('Exercise complete!');
         } else {
             currentTime--;

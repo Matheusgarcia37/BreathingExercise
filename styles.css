@@ -1,3 +1,9 @@
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #000;
+    --circle-color: #4CAF50;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -6,7 +12,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: #f0f0f0;
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
 }
 
 .container {
@@ -21,7 +29,7 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #4CAF50;
+    background-color: var(--circle-color);
     margin: 40px auto;
     transform: scale(1);
     transition: transform 4s ease-in-out;
@@ -30,7 +38,7 @@ body {
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: var(--circle-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -41,9 +49,24 @@ button:hover {
     background-color: #45a049;
 }
 
+#themeToggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
 #timer {
     margin-top: 20px;
     font-size: 20px;
+}
+
+.meditation-image {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 50%;
 }
 
 footer {
@@ -52,5 +75,11 @@ footer {
     width: 100%;
     text-align: center;
     font-size: 14px;
-    color: #555;
+    color: var(--text-color);
+}
+
+body.dark {
+    --background-color: #121212;
+    --text-color: #fff;
+    --circle-color: #bb86fc;
 }
