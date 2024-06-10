@@ -83,3 +83,7 @@ body.dark {
     --text-color: #fff;
     --circle-color: #bb86fc;
 }
+
+#stats {
+    margin-top: 20px;
+}
